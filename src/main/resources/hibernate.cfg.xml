@@ -7,9 +7,9 @@
     <session-factory>
          <!-- 1. Configuración de la conexión (JDBC) -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3307/ecomerce</property>
-        <property name="connection.username">root</property>
-        <property name="connection.password"></property>
+        <property name="connection.url">jdbc:mysql://localhost:3307/ecomerce_BD</property>
+        <property name="connection.username">TU USUARIO</property>
+        <property name="connection.password">TU PASSWORD</property>
 
         <!-- 2. Dialecto SQL para que Hibernate hable el idioma de tu BD -->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
