@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+         <!-- 1. Configuración de la conexión (JDBC) -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3307/ecomerce</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+
+        <!-- 2. Dialecto SQL para que Hibernate hable el idioma de tu BD -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+
+        <property name="hbm2ddl.auto">update</property>
+
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- 5. Mapeo de clases (Entidades) -->
+        <mapping class="model.Empleado"/>
+        <mapping class="model.Cliente"/>
+        <mapping class="model.Producto"/>
+        <mapping class="model.Venta"/>
+        <mapping class="model.LineaDeVenta"/>
+        
+    </session-factory>
+</hibernate-configuration>
